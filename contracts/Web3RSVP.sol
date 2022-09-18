@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 //These properties are the properties that each individual event
 // will have on our platform. All of these details will also be stored on-chain.
+//e: programar el contrato para proyecto de creacion de eventos
 contract Web3RSVP {
     // NewEventCreated: exposes data about the new event like the owner, max capacity, event owner, deposit amount, etc.
     event NewEventCreated(
@@ -19,7 +20,7 @@ contract Web3RSVP {
     // exposes data about unclaimed deposits being sent to the event organizer
     event DepositsPaidOut(bytes32 eventID);
 
-    struct CreateEvent {
+    struct CreateEvent 
         bytes32 eventId;
         //we’re storing a reference to an IPFS hash where those details will be stored off-chain
         string eventDataCID;
